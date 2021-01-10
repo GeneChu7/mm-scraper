@@ -29,8 +29,7 @@ server.login(os.getenv('MAIL_ADDRESS'), os.getenv('MAIL_PASSWORD'))
 print('Starting Stream')
 print('\n----------------------------\n')
 
-# for submission in reddit.subreddit('mechmarket').stream.submissions(skip_existing=True):
-for submission in reddit.subreddit('mechmarket').stream.submissions(skip_existing=False):
+for submission in reddit.subreddit('mechmarket').stream.submissions(skip_existing=True):
     # getting necessary details
     post_flair = submission.link_flair_text
     post_title = submission.title 
